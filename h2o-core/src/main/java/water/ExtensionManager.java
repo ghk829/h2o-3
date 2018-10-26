@@ -10,7 +10,7 @@ import water.util.StringUtils;
 import java.util.*;
 
 public class ExtensionManager {
-
+  // static으로 선언하여 class가 load되자마자 Singletone으로 인스턴스 생성하게 됨 
   private static ExtensionManager extManager = new ExtensionManager();
 
   /** System property to force enable/disable named REST API extension */
