@@ -136,6 +136,7 @@ public class ExtensionManager {
     }
     long before = System.currentTimeMillis();
     RequestServer.DummyRestApiContext dummyRestApiContext = new RequestServer.DummyRestApiContext();
+ // Service Loader를 통해서 Schema 상속한 클래스들은 전부 ServiceLoader에 등록됨.
     ServiceLoader<RestApiExtension> restApiExtensionLoader = ServiceLoader.load(RestApiExtension.class);
     for (RestApiExtension r : restApiExtensionLoader) {
       try {
