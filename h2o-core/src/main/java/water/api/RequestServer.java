@@ -54,6 +54,7 @@ import java.util.zip.ZipOutputStream;
  * @see water.api.Handler
  * @see water.api.RegisterV3Api
  */
+// Servlet을 상속함으로써 HTTP METHOD를 매핑함
 public class RequestServer extends HttpServlet {
 
   // TODO: merge doGeneric() and serve()
