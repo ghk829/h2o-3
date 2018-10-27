@@ -19,7 +19,6 @@ from .random_forest import H2ORandomForestEstimator
 from .stackedensemble import H2OStackedEnsembleEstimator
 from .svd import H2OSingularValueDecompositionEstimator
 from .word2vec import H2OWord2vecEstimator
-from .xgboost import H2OXGBoostEstimator
 
 __all__ = (
     "H2OAggregatorEstimator", "H2OAggregatorEstimator", "H2OAutoML", "H2OAutoEncoderEstimator",
@@ -30,6 +29,5 @@ __all__ = (
     "H2ONaiveBayesEstimator", "H2ONaiveBayesEstimator", "H2OPrincipalComponentAnalysisEstimator",
     "H2OPrincipalComponentAnalysisEstimator", "H2ORandomForestEstimator", "H2ORandomForestEstimator",
     "H2OStackedEnsembleEstimator", "H2OStackedEnsembleEstimator", "H2OSingularValueDecompositionEstimator",
-    "H2OSingularValueDecompositionEstimator", "H2OWord2vecEstimator", "H2OWord2vecEstimator", "H2OXGBoostEstimator",
-    "H2OXGBoostEstimator"
+    "H2OSingularValueDecompositionEstimator", "H2OWord2vecEstimator", "H2OWord2vecEstimator"
 )
