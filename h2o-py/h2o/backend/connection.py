@@ -70,7 +70,7 @@ class H2OConnectionConf(object):
     """List of allowed property names exposed by this class"""
     allowed_properties = ["ip", "port", "https", "context_path", "verify_ssl_certificates",
                           "proxy", "auth", "cookies", "verbose"]
-    
+
     def _fill_from_config(self, config):
         """
         Fill this instance from given dictionary.
@@ -395,6 +395,7 @@ class H2OConnection(backwards_compatible()):
             headers = {"User-Agent": "H2O Python client/" + sys.version.replace("\n", ""),
                        "X-Cluster": self._cluster_id,
                        "Cookie": self._cookies}
+            # requests 라이브러리를 이용하여 RESTAPI 호출로 서비스
             resp = requests.request(method=method, url=url, data=data, json=json, files=files, params=params,
                                     headers=headers, timeout=self._timeout, stream=stream,
                                     auth=self._auth, verify=self._verify_ssl_cert, proxies=self._proxies)
