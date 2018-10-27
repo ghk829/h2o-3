@@ -159,6 +159,7 @@
     #can then be brought back into R as a raw vector and then used in different ways, e.g. uncompressed
     #with the Rcompression package, or written to a file via writeBin. We can also convert the raw vector to of type
     #character.
+    # curlPerform을 이용하여 서비스. jsonlite로 data를 넘김
     tmp <- tryCatch(curlPerform(url = URLencode(url),
                                   customrequest = method,
                                   writefunction = write,
@@ -557,6 +558,7 @@ print.H2OTable <- function(x, header=TRUE, ...) {
 # Error checking is performed.
 #
 # @return JSON object converted from the response payload
+# R 의 경우 jsonlite로 데이터를 주고받음
 .h2o.__remoteSend <- function(page, method = "GET", ..., autoML = FALSE, .params = list(), raw=FALSE, h2oRestApiVersion = .h2o.__REST_API_VERSION) {
   stopifnot(is.character(method))
   stopifnot(is.list(.params))
