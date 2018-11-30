@@ -54,7 +54,7 @@ import java.util.zip.ZipOutputStream;
  * @see water.api.Handler
  * @see water.api.RegisterV3Api
  */
-// ServletÀ» »ó¼ÓÇÔÀ¸·Î½á HTTP METHOD¸¦ ¸ÅÇÎÇÔ
+// Servletï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î½ï¿½ HTTP METHODï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class RequestServer extends HttpServlet {
 
   // TODO: merge doGeneric() and serve()
@@ -449,6 +449,7 @@ public class RequestServer extends HttpServlet {
           return response404(method + " " + url, type);
 
       } else {
+        // URI to ModelBuilderHandler.handle
         Schema response = route._handler.handle(uri.getVersion(), route, parms, post_body);
         PojoUtils.filterFields(response, (String)parms.get("_include_fields"), (String)parms.get("_exclude_fields"));
         return serveSchema(response, type);
