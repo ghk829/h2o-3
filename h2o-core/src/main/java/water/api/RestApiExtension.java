@@ -20,6 +20,7 @@ public interface RestApiExtension {
    *
    * @param context
    */
+  // resgister URI to do service
   void registerEndPoints(RestApiContext context);
 
   /**
