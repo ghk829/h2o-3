@@ -2,6 +2,7 @@
 # H2O Key-Value Store Functions
 #-----------------------------------------------------------------------------------------------------------------------
 
+# generate key for managing data.frame or R objects
 .key.validate <- function(key) {
   if (!missing(key) && !is.null(key)) {
     stopifnot( is.character(key) && length(key) == 1L && !is.na(key) )

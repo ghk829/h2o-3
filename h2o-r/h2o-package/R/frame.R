@@ -3218,6 +3218,8 @@ use.package <- function(package,
 #'   stopifnot(is.h2o(hs), dim(hs)==dim(m))
 #' }
 #' }
+
+# @usage UseMethod by class to call the methods
 as.h2o <- function(x, destination_frame="", ...) {
   .key.validate(destination_frame)
   UseMethod("as.h2o")
