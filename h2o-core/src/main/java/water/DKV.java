@@ -49,6 +49,7 @@ package water;
  *  @author <a href="mailto:cliffc@h2o.ai"></a>
  *  @version 1.0
  */
+// manage Frames for analysis
 public abstract class DKV {
 
   /** Make the mapping <em>key -&gt; v</em>.  Blocking, caching.  */
